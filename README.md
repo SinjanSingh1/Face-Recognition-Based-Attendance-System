@@ -6,8 +6,7 @@ This project is a web application demonstrating the use of facial recognition fo
 
 ## Functionality Supported
 
-- Register new employees.
-- Add employee photos.
+- Register employees by adding their photos.
 - View attendance reports of all employees. Attendance can be filtered by date or employee.
 
 ## Built Using
