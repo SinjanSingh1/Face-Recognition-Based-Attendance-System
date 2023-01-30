@@ -114,23 +114,19 @@ def gen():
                 name = filename[matchindex].upper()
                 # print(name)
                 y1, x2, y2, x1 = faceloc
-                # multiply locations by 4 because we above we reduced our webcam input image by 0.25
-                # y1,x2,y2,x1 = y1*4,x2*4,y2*4,x1*4
+              
                 cv2.rectangle(img, (x1, y1), (x2, y2), (255, 0, 0), 2)
                 cv2.rectangle(img, (x1, y2 - 35), (x2, y2), (255, 0, 0), 2, cv2.FILLED)
                 cv2.putText(img, name, (x1 + 6, y2 - 6), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2)
                 takeAttendence(name)  # taking name for attendence function above
 
-        # cv2.imshow("campare", img)
-        # cv2.waitKey(0)
+     
         frame = cv2.imencode('.jpg', img)[1].tobytes()
         yield (b'--frame\r\n'b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
         key = cv2.waitKey(20)
         if key == 27:
             break
 
-
-@app.route('/video_feed')
 def video_feed():
     """Video streaming route. Put this in the src attribute of an img tag."""
     return Response(gen(),
