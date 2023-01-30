@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FACE RECOGNITION</title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+ <style>a:hover {
+    font-size: 22px;
+    transition: 0.3s;
+}</style>
+</head>
+
+<body style="background-color: #D9AFD9;
+background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%); background-size:cover;  background-image: no-repeat;" >
+<!-- As a link -->
+<nav class="navbar navbar-light bg-success justify-content-center">
+  <a class="navbar-brand" style="font-weight: bold; color:white;" href="#">ASISTENCIA SYSTEM</a>
+</nav>
+<br>
+ <div class="mx-auto" style="width: 700px;">
+  <img src="{{ url_for('video_feed') }}">
+</div>
+
+<br><br>
+<div class="mx-auto" style="width: 150px;">
+  <a href="http://127.0.0.1:5000/">
+   <button type="button" class="btn btn-success">Upload New image</button>
+</a>
+</div>
+<p class="mt-5 mb-3 text-muted text-center">&copy; 2022-2023 </p>
+</body>
+</html>
