@@ -1,6 +1,6 @@
 # Face-Recognition-Based-Attendance-System
 
-Recognize The faces And Take Automatic Attandance.
+Recognize The faces And Take Automatic Attendance.
 
 This project is a web application demonstrating the use of facial recognition for marking attendance. It is a web application that can be used by the company to manage attendance of its employees.
 
